@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background: @dark;
+    color: @light;
+
+    padding: 0 2rem;
+
+    @media @mobile {
+        flex-direction: column;
+    }
+
+    a {
+        text-decoration: none;
+        color: @light;
+    }
+
+    nav {
+        width: 440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media @mobile {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    address {
+        padding: .6rem 1.6rem;
+        margin: 10px 0;
+        background: @light;
+        border-radius: 5px;
+
+        flex-basis: 400px;
+
+        @media @mobile {
+            flex-basis: unset;
+        }
+
+        a {
+            color: @dark;
+        }
+    }
+
+    .menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+}

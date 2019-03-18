@@ -1,0 +1,147 @@
+.cta {
+    .cta-button {
+        padding: 1rem 4rem;
+        border-radius: 5px;
+        background: @mid;
+
+        color: @light;
+        font-size: 2.4rem;
+
+        text-shadow: none;
+        text-decoration: none;
+    }
+
+    &.cta-main {
+        min-height: 60vh;
+        width: 100%;
+
+        color: @dark;
+        text-shadow: 0 0 2px @light;
+
+        .colorWrapper {
+            background: rgba(247, 247, 239, 0.8);
+
+            min-height: inherit;
+            
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            padding: 15px;
+
+            @media @tablet {
+                flex-direction: column;
+            }
+        }
+
+        .cta-content {
+            width: 40%;
+            text-align: center;
+
+            @media @tablet {
+                width: 94%;
+            }
+
+            h2 {
+                font-size: 3.6rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .cta-reviews {
+            width: 35%;
+
+            @media @tablet {
+                margin-top: 5rem;
+                width: 94%;
+            }
+
+            .review {
+                display: none;
+
+
+                blockquote::before {
+                    color: @dark;
+                    content: open-quote;
+                    font-size: 3em;
+                    line-height: 0.1em;
+                    margin-right: 0.25em;
+                    vertical-align: -0.4em;
+                }
+
+                blockquote {
+                    font-size: 2rem;
+                    opacity: inherit;
+                }
+
+                blockquote::after {
+                    color: @dark;
+                    content: close-quote;
+                    font-size: 3em;
+                    line-height: 0.1em;
+                    margin-left: 0.25em;
+                    vertical-align: -0.4em;
+                }
+
+                cite::before{
+                    color: @dark;
+                    content: "-";
+                    font-size: 2rem;
+                    margin-right: .25em;
+                }
+
+                cite {
+                    font-size: 2rem;
+                    margin: 2rem 0;
+                }
+
+                .review-stars {
+                    margin: 0 auto;
+                    
+                    @media @tablet {
+                        text-align: center;
+                    }
+                }
+
+                .fas {
+                    transform: scale(1.5);
+                    margin-left: 1.2rem;
+                    margin-top: 2rem;
+
+                    opacity: inherit;
+                }
+
+                .fas:first-child {
+                    margin-left: 0;
+                }
+
+                &.active {
+                    display: unset;
+                }
+            }
+        }
+    } // cta-main
+
+    &.cta-bottom {
+
+        min-height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        background: @light-accent;
+        color: @light;
+
+        h3 {
+            color: @mid;
+        }
+
+        .cta-button {
+            background: @mid;
+            transform: scale(1.25);
+        }
+
+    }
+}
